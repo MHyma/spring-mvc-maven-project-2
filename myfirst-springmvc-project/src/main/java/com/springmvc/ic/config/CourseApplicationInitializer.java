@@ -9,12 +9,16 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.context.support.XmlWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
-public class CourseApplicationInitializer implements WebApplicationInitializer {
+public class CourseApplicationInitializer // implements  WebApplicationInitializer {
+{
 
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		
+		// XML Configuration - in java based
+		
 //		XmlWebApplicationContext webApplicationContext= new XmlWebApplicationContext();
 //		webApplicationContext.setConfigLocation("classpath:beans.xml");
+		
 		
 		AnnotationConfigWebApplicationContext webApplicationContext=new AnnotationConfigWebApplicationContext();
 		webApplicationContext.register(CourseAppConfig.class);
